@@ -1,6 +1,6 @@
 <button *ngIf="isTopicCreator" (click)="startDiscussion();logTelemetry($event)"
-    class="sb-btn sb-btn-primary sb-btn-normal mb-16" data-toggle="modal" data-target="#myModal"
-    id="start-discussion">Start Discussion</button>
+    class="df-btn df-reply-btn" data-toggle="modal" data-target="#myModal"
+    id="start-discussion" role="link" tabindex="0">Start Discussion</button>
 <div *ngIf="discussionList && discussionList.length > 0" class="topic-list-container" #scrollContainerHeight>
     <div [infiniteScrollContainer]="'.topic-list-container'" infinite-scroll class="infinite-scroll"
         [scrollWindow]="false" [infiniteScrollDistance]="InfiniteScrollConfig.modalScrollDistance" [fromRoot]="true"

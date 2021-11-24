@@ -42,7 +42,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "root": "demo",
@@ -63,7 +63,7 @@
               "demo/src/assets"
             ],
             "styles": [
-              "demo/src/styles.sass",
+              "demo/src/styles.scss",
               "demo/src/assets/discussion-ui/styles/global.scss"
             ],
             "scripts": []
@@ -129,7 +129,7 @@
               "demo/src/assets"
             ],
             "styles": [
-              "demo/src/styles.sass"
+              "demo/src/styles.scss"
             ],
             "scripts": []
           }

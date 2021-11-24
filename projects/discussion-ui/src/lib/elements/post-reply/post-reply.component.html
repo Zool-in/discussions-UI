@@ -21,7 +21,7 @@
     <button [ngClass]="{'sb-btn-disabled': !isButtonEnabled }" 
       *ngIf="mode === 'edit'"
       [disabled]="!isButtonEnabled" 
-      class="sb-btn sb-btn-normal sb-btn-primary ml-8" 
+      class="df-btn df-reply-btn" 
       (click)="onReplyClick('edit')" 
       id="update-post"
       type="button">
@@ -30,7 +30,7 @@
     <button [ngClass]="{'sb-btn-disabled': !replyForm.valid }" 
       *ngIf="mode !== 'edit'"
       [disabled]="!replyForm.valid" 
-      class="sb-btn sb-btn-normal sb-btn-primary ml-8" 
+      class="df-btn df-reply-btn" 
       (click)="onReplyClick('reply')" 
       id="update-post"
       type="button">

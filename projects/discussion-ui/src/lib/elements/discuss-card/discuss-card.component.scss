@@ -1,6 +1,5 @@
 .discuss-card-title{
-    margin: 0px;
-    color: #000;  
+    margin: 0px; 
     cursor:pointer;
     font-size: 16px;
     font-weight: 700;
@@ -8,7 +7,7 @@
 }
 
 .discuss-card-label{
-    color: #0074b6;
+    color: var(--primary);
     @media screen and (max-width:768px) {
         flex-basis: 100%;
     }
@@ -76,7 +75,7 @@ word-break: break-word;
 }
 
 .comments-count{
-    color: #0074b6;
+    color: var(--primary);
     font-weight: 700;
 }
 

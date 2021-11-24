@@ -1,3 +1,13 @@
+::ng-deep:root{
+	--df-modal-content-bg:var(--white);
+	--df-modal-field-control-bg:var(--white);
+}
+
+.modal{
+	position: relative;
+	z-index: 9999999;
+}
+
 .discussion-start-modal {
 	position: fixed;
 	top: 0;
@@ -13,13 +23,14 @@
 	pointer-events: auto;
 
 	.discussion-start-modal-content {
-		max-width: 800px;
+		max-width: 400px;
 		width: 90%;
 		position: relative;
 		margin: 0 auto;
 		padding: 24px;
 		border-radius: 3px;
-		background: #fff;
+		background: var(--df-modal-content-bg);
+		color: var(--df-text);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -44,10 +55,10 @@
 				}
 
 				.start-form-field-control {
-					background-color: var(--white);
+					background: var(--df-modal-field-control-bg);
 					border: 0.0625rem solid var(--gray-200);
 					border-radius: 0.1875rem;
-					color: var(--gray-800);
+					color: var(--df-text);
 					display: block;
 					font-size: 0.8125rem;
 					max-width: 100%;
@@ -58,13 +69,13 @@
 					outline:none;
 					padding: 0 0.875rem;
 					&:focus,.active{
-						border-color: var(--primary-400) !important;
+						border-color: var(--primary-400);
 					}
 				}
 			}
 
-			.start-form-msg-error {
-				color: var(--red);
+			.text-error {
+				color: var(--primary);
 			}
 
 			.mandatory-label {
@@ -75,36 +86,37 @@
 			.start-modal-buttons {
 				float: right;
 
-				.start-common-btn {
-					box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-						0 1px 5px 0 rgba(0, 0, 0, 0.12);
-					vertical-align: baseline;
-					text-align: center;
-					min-width: 64px;
-					line-height: 36px;
-					padding: 0 16px;
-					border-radius: 4px;
-					font-weight: 700;
-					font-size: 14px;
-					border: 0px;
-					cursor: pointer;
-				}
+				// .start-common-btn {
+				// 	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+				// 		0 1px 5px 0 rgba(0, 0, 0, 0.12);
+				// 	vertical-align: baseline;
+				// 	text-align: center;
+				// 	min-width: 64px;
+				// 	line-height: 36px;
+				// 	padding: 0 16px;
+				// 	border-radius: 4px;
+				// 	font-weight: 700;
+				// 	font-size: 14px;
+				// 	border: 0px;
+				// 	cursor: pointer;
+				// }
 
-				.discard-btn {
-					color: #0074b6;
-					background: #fff;
-					cursor: pointer;
-				}
+				// .discard-btn {
+				// 	color: #0074b6;
+				// 	background: #fff;
+				// 	cursor: pointer;
+				// }
 
-				.submit-post-btn {
-					color: #fff;
-					margin-left: 1rem;
-					background-color: #0074b6;
-					cursor: pointer;
-				}
+				// .submit-post-btn {
+				// 	color: #fff;
+				// 	margin-left: 1rem;
+				// 	background-color: #0074b6;
+				// 	cursor: pointer;
+				// }
 
 				.df-btn-disabled {
-					background-color: var(--gray-100);
+				    background: var(--gray-100);
+                    color: var(--gray-200);
 				}
 			}
 

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding:2rem;
+    background:var(--df-body-bg);
+}
+
+.change-theme {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1111;
+}
+
+//themes css
+
+// Joy Theme
+html[layout="joy"] {
+	--df-body-bg:#f3f3e5; 	// body bg
+	--df-header-bg: #e9e8d9; // df header bg
+	--df-sidebar-menu-active-bg: #e9e8d9; // sidebar active bg
+	--df-modal-content-bg:#e9e8d9;  // modal content bg
+	 --df-alt-clr-fff-333: #e9e8d9; 
+}
+
+// Dark Theme
+html[data-theme="dark"] {
+	// Dark Theme color variation
+	--primary: #ffd92a;
+	--primary-0: #fffcee;
+	--primary-100: #fff8db; // default button bg
+	--primary-200: #fffd2a; // divider
+	--primary-250: #f1f1c7;
+	--primary-300: #ffeb2a; // outline, focus fields
+	--primary-400: var(--primary); // button bg, heading, table titles, links, toggles
+	--primary-600: #ffc72a; // on press
+	--primary-800: #ffb62a; // hover
+
+	--secondary: #ffd92a;
+	--secondary-200: #ffd92a;
+
+    --df-body-bg:#222; 	// body bg
+	--df-header-bg: #444; 	// df header bg
+	--df-tag-empty-bg: #444; // tag container
+	--df-filter-bg:#444; // filter bg
+	--df-form-field-bg: var(--gray-600); // form field bg
+	--df-dot-bg:var(--white); // dot bg
+    
+	//sidebar
+	--df-sidebar-menu-text:var(--primary-0);
+	--df-sidebar-menu-active-bg: #444;
+	--open-btn-bg:#FFFFFF;
+	--open-btn-color:#333; // hamburger menu
+
+	// Text Color
+	--df-text: var(--white);
+	--df-text-primary: var(--primary);
+
+	// Cards
+	--df-card-bg: #444;
+    --df-catgry-card-main-text:var(--df-text);
+    --df-catgry-card-headr-labl:var(--df-text);
+    --df-catgry-card-headr-text:var(--df-text);
+	--df-related-card-bg:#444;
+
+	//modal
+	--df-modal-content-bg:#333;
+	--df-modal-field-control-bg:#222;
+
+	// For portal override
+	--df-alt-clr-fff-333: #333333;
+
+	img{
+		filter: invert(1);
+	}
+}
+
+// Green Theme
+html[data-theme='Green'] {
+	--primary: #008a40;
+	--primary-0: #f0faf1;
+	--primary-100: #d5e9d7;
+	--primary-200: #AFCAB1;
+	--primary-300: #74B48B;
+	--primary-400: var(--primary);
+	--primary-800: #0b8242;
+}
+
+// Orange Theme
+html[data-theme='Orange'] {
+	--primary: #E7800B;
+	--primary-100: #ffe081;
+	--primary-200: #D4A56F;
+	--primary-300: #FFB561;
+	--primary-400: var(--primary);
+	--primary-800: #e77b00;
+}
+
+// Common Themes
+html[data-theme='default'],
+html[data-theme='Green'],
+html[data-theme='Orange'] {
+
+	--df-alt-clr-fff-333: var(--white);
+
+	// Text Color
+	--df-text: var(--gray-800);
+	--df-text-primary: var(--primary);
+
+	// Cards
+	--df-card-bg: var(--white);
+
+	// Filter option
+	--df-filt-opt-brd: var(--gray-400);
+
+	// Form fields
+	--df-form-field-bg: var(--white);
+}
+
+ //	specific classes
+html[layout="joy"] {
+	 lib-lib-entry {
+		.df-header, .df-content .discuss-right-panel {
+            border-radius: 1.5rem;
+			background: var(--df-alt-clr-fff-333);
+		}
+
+		.df-btn {
+            border-radius: 1.5rem !important;
+		}
+	}
+}

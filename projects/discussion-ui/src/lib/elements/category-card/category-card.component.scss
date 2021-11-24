@@ -1,7 +1,13 @@
+::ng-deep:root{
+    --df-card-bg: var(--white); 
+    --df-catgry-card-main-text:var(--black);
+    --df-catgry-card-headr-labl:var(--black);
+    --df-catgry-card-headr-text:var(--black);
+}
+
 .category-card {
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-    background: #fff;
-    color: rgba(0, 0, 0, .87);
+    background:var(--df-card-bg);
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
     display: block;
     position: relative;
@@ -22,7 +28,7 @@
     align-items: center;
 }
 .catergory-card-header-image {
-    border: 1px solid  #fed7d7;;
+    border: 1px solid  var(--red-0);
     border-radius: 50%;
     max-width: 50px;
     width: 100%;
@@ -46,12 +52,12 @@
     /* autoprefixer: on */
     overflow: hidden;
     text-overflow: ellipsis;
-    color: rgba(0,0,0,.87);
+    color: var(--df-catgry-card-headr-labl);
     word-break:break-word;
 }
 
 .category-card-header-text {
-    color: #5f5f5f !important;
+    color: var(--df-catgry-card-headr-text);
     /* autoprefixer: off */
     -webkit-box-orient: vertical;
     /* autoprefixer: on */
@@ -72,7 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgba(0,0,0,.6);
+    color: var(--df-catgry-card-main-text);
 }
 
 .eye-icon {
